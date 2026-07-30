@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View available farm produce and agricultural support services from Tiyende Agribiz.">
+  <title>Tiyende Agribiz | Farm Produce & Farmer Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Tiyende Agribiz home">
+      <span class="brand-mark">TA</span>
+      <span>Tiyende <strong>Agribiz</strong></span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="#stock">Stock</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-contact" href="#contact">Contact us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">From Malawi's farms to trusted markets</p>
+        <h1>Quality produce. Better farming. Stronger markets.</h1>
+        <p class="hero-text">Tiyende Agribiz supplies dependable farm produce and helps farmers grow sustainably, adapt to climate change, and reach markets offering fair prices.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#stock">View available stock</a>
+          <a class="button button-secondary" href="https://wa.me/265991645725" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+        <div class="trust-row" aria-label="Key benefits">
+          <span>✓ Quality produce</span><span>✓ Farmer focused</span><span>✓ Market connections</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="field field-one"></div>
+        <div class="field field-two"></div>
+        <div class="crop-card"><span>🌽</span><strong>Locally sourced</strong><small>From trusted farmers</small></div>
+      </div>
+    </section>
+
+    <section id="stock" class="section stock-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">Current produce</p><h2>What we have in stock</h2></div>
+        <p>Availability changes with the season. Contact us to confirm quantities, grades, delivery and current prices.</p>
+      </div>
+      <div class="stock-toolbar">
+        <label class="search-box">Search produce <input id="stock-search" type="search" placeholder="Try maize or beans…"></label>
+        <div class="status-key"><span class="dot available"></span> Available <span class="dot low"></span> Low stock <span class="dot unavailable"></span> Unavailable</div>
+      </div>
+      <div id="stock-grid" class="stock-grid" aria-live="polite"></div>
+      <p id="stock-message" class="stock-message" hidden></p>
+    </section>
+
+    <section id="services" class="section services-section">
+      <div class="section-heading compact"><div><p class="eyebrow">Beyond produce</p><h2>Helping agriculture thrive</h2></div></div>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-number">01</span><h3>Climate change training</h3><p>Practical knowledge to understand climate risks and build more resilient farms.</p></article>
+        <article class="service-card featured"><span class="service-number">02</span><h3>Climate-smart agriculture</h3><p>Methods that improve productivity while protecting soil, water and future harvests.</p></article>
+        <article class="service-card"><span class="service-number">03</span><h3>Sustainable farming</h3><p>Training in responsible farming practices that support long-term farm success.</p></article>
+        <article class="service-card"><span class="service-number">04</span><h3>Market connections</h3><p>Helping farmers find reliable buyers and better markets with fair maize prices.</p></article>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="about-panel"><p class="eyebrow">Why Tiyende</p><h2>We grow when farmers grow.</h2><p>Our work connects quality agricultural produce with customers who value reliable supply. At the same time, we equip farmers with useful skills and help them find stronger routes to market.</p><a class="text-link" href="#contact">Work with us →</a></div>
+      <div class="values-grid"><div><strong>Reliable</strong><span>Clear communication and trusted supply</span></div><div><strong>Practical</strong><span>Training farmers can use in the field</span></div><div><strong>Sustainable</strong><span>Better outcomes for farms and communities</span></div></div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div><p class="eyebrow light">Let’s do business</p><h2>Need produce, training or a better market?</h2><p>Tell us what you need. We will discuss availability, pricing and the best way we can help.</p></div>
+      <div class="contact-actions">
+        <a href="tel:+265991645725"><span>Call or WhatsApp</span><strong>+265 991 645 725</strong></a>
+        <a href="mailto:tiyendeagribiz@gmail.com"><span>Email us</span><strong>tiyendeagribiz@gmail.com</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">TA</span><span>Tiyende <strong>Agribiz</strong></span></a><p>Trusted farm produce and farmer support.</p><p>© <span id="year"></span> Tiyende Agribiz</p></footer>
+</body>
+</html>
