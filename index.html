@@ -59,6 +59,14 @@
         <label class="search-box">Search produce <input id="stock-search" type="search" placeholder="Try maize or beans…"></label>
         <div class="status-key"><span class="dot available"></span> Available <span class="dot low"></span> Low stock <span class="dot unavailable"></span> Unavailable</div>
       </div>
+      <div class="stock-controls" aria-label="Filter produce by availability">
+        <div class="filter-pills">
+          <button class="filter-pill active" type="button" data-filter="all">All produce</button>
+          <button class="filter-pill" type="button" data-filter="available">Available now</button>
+          <button class="filter-pill" type="button" data-filter="low_stock">Low stock</button>
+        </div>
+        <p id="stock-summary" class="stock-summary">Loading current stock…</p>
+      </div>
       <div id="stock-grid" class="stock-grid" aria-live="polite"></div>
       <p id="stock-message" class="stock-message" hidden></p>
     </section>
@@ -86,6 +94,8 @@
       </div>
     </section>
   </main>
+
+  <a class="floating-whatsapp" href="https://wa.me/265991645725?text=Hello%20Tiyende%20Agribiz%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with Tiyende Agribiz on WhatsApp"><span aria-hidden="true">WA</span> WhatsApp us</a>
 
   <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">TA</span><span>Tiyende <strong>Agribiz</strong></span></a><p>Trusted farm produce and farmer support.</p><p>© <span id="year"></span> Tiyende Agribiz</p></footer>
 </body>
